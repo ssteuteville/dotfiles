@@ -1,0 +1,22 @@
+[user]
+	email = email-here
+	name = name-here
+[alias]
+	findcommit = !git log --oneline --date=short --pretty=format:"%Cred%<(10)%h%Creset%Cgreen%<(20)%an%Creset%Cblue%<(15)%ad%Creset%<(20)%s" --source --all -S
+	fc = !git log --oneline --date=short --pretty=format:"%Cred%<(10)%h%Creset%Cgreen%<(20)%an%Creset%Cblue%<(15)%ad%Creset%<(20)%s" --source --all -S
+	b = branch
+	start = checkout -b
+	co = checkout
+	del = branch -D
+	hist = log --graph --oneline --decorate --all
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	la = "!git config -l | grep alias | cut -c 7-"
+	rekt = reset --hard
+	woops = reset --soft HEAD~1
+[init]
+	defaultBranch = main
+[sequence]
+	editor = interactive-rebase-tool
+[push]
+	autoSetupRemote = true
